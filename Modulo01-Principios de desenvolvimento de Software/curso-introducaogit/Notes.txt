@@ -1,0 +1,3 @@
+ - Reforçar os comandos de terminal
+ - Mover futuramente o repo todo
+ - Reforçar os Commits/Push
