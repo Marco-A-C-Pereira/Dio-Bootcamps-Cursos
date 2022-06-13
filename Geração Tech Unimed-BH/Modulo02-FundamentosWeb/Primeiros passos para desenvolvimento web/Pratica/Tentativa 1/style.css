@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    background: #ff4242;
+    margin: 0;
+    padding: 0;
+    max-width:75%;
+    margin:auto;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 7px;
+    margin-top:3px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    color: snow;
+    background: green;
+    font-family: 'Dancing Script', "Comic Sans MS", cursive;
+}
+
+.topopagina img {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.topopagina h1 {
+    margin: 5px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dancing Script', "Comic Sans MS", cursive;
+}
+
+.topopagina ul {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    padding-inline-start: 0px;
+    background: #01bb01;
+    overflow: hidden;
+}
+
+.topopagina li {
+    display: inline;
+    float: left;
+    background: green;
+    margin-left: 0px;
+    border-right: 1px solid #01bb01;
+}
+
+.topopagina li a:hover:not(.active) {
+    background: grey;
+}
+
+#homepage{
+    background:#c6a700;
+}
+
+#about {
+    float: right;
+}
+
+.topopagina a {
+    display: inline-block;
+    color: snow;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.receitas content {
+    
+}
+
+.receitas ul {
+    padding-inline-start: 0px;
+    margin: 5px 30%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.receitas li {
+    display: inline;
+}
+
+.receitas a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 0px 5px 0px 0px;
+    border: 1px solid black;
+    border-radius: 10%;
+    overflow: visible;
+    background: #f8e370;
+}
+
+.receitas a img{
+    height:50px;
+    width:50px;
+    float:left;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.receitas a p{
+    display:inline;
+    float:right;
+}
+
+.galeriaimg content {
+    border: 5px double black;
+    background: #dc8585ff;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 200px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-basis: auto;
+    align-items: center;
+}
+
+
+
+.galeriaimg img {
+    width:20%;
+    height:100%;
+}
+
+.texto_comeco p {
+    font-family: Arial;
+    font-size:16px;
+}

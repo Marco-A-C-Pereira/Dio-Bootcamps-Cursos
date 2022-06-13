@@ -1,0 +1,56 @@
+body {
+    background: #d5d5d5;
+    font-family:'Comic Sans MS';
+}
+
+
+
+h1, .top-sec, .start-article-01, .start-article-02, .article-text, #rodape-titulo{
+    margin: 0;
+}
+
+h1{
+    margin-bottom:5px;
+}
+
+#rodape-titulo {
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.top-sec{
+    margin-bottom:10px;
+    margin-top:3px;
+    text-transform:uppercase;
+}
+
+.start-article-01, .start-article-02 {
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 25px;
+    
+}
+
+.article-text {
+    margin-bottom: 7px;
+    margin-left: 10px;
+    text-transform:capitalize;
+    font-weight:50;
+    font-family:Arial;
+}
+
+.section-01, .section-02{
+    border:1px solid;
+    border-radius:5%;
+    padding: 5px;
+}
+
+.section-01 {
+    background: #a6ff80;
+    border-bottom: dotted;
+}
+
+.section-02 {
+    background: #ffa1a1;
+    border-top: dotted;
+}

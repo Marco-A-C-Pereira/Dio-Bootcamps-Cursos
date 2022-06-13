@@ -11,6 +11,9 @@ Repositório de imagens grátis
  
 ## CSS
 
-
-
- 
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-properties-for-the-parentflex-container  
+ Guida sobre flexbox (Utilizei pra centralizar as imgs)
+ - https://fonts.google.com   
+ Repositorio de fontes da google
+ - https://www.youtube.com/watch?v=FLuQonci9wU  
+ Tuto sobre introdução de fontes externas
