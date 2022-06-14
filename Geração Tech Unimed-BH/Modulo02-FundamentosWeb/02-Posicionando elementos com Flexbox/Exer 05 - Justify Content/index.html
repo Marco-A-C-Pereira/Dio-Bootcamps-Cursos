@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Fundamentos - Justify Content</title>
+    <style>
+        .container {
+            max-width: 400px;
+            border: 1px solid black;
+            margin: 0;
+            display: flex;
+        }
+
+        .item{
+            background:blueviolet;
+            margin:5px;
+            text-align: center;
+            color:whitesmoke;
+            font-size:20px;
+        }
+
+        .flex-start{
+            justify-content: flex-start;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .flex-space-between{
+            justify-content:space-between;
+        }
+
+        .flex-space-around {
+            justify-content: space-around;
+        }
+
+        .collum{
+            flex-direction:column;
+            min-height:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Comportamento em Row</h1>
+    <h2>Flex start (default)</h2>
+    <section class="container flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+    </section>
+
+    <h2>Flex end </h2>
+    <section class="container flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+    </section>
+
+    <h2>Center </h2>
+    <section class="container flex-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+    <h2>Space-between </h2>
+    <section class="container flex-space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+    <h2>Space-around </h2>
+    <section class="container flex-space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+    <h1>Comportamento em Collum</h1>
+    <h2>Flex start (default)</h2>
+    <section class="container flex-start collum">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+    </section>
+    <h2>Flex end </h2>
+    <section class="container flex-end collum">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+    </section>
+    <h2>Center </h2>
+    <section class="container flex-center collum">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+    <h2>Space-between </h2>
+    <section class="container flex-space-between collum">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+    <h2>Space-around </h2>
+    <section class="container flex-space-around collum">
+        <div class="item">Item 1</div>
+        <div class="item">Item Dois</div>
+        <div class="item">Tres</div>
+        <div class="item">Outro</div>
+        <div class="item">5</div>
+    </section>
+
+</body>
+
+</html>

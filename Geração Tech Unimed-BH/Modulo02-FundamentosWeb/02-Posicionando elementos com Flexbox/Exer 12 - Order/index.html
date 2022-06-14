@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Fundamentos - Order</title>
+    <style>
+        .container {
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            flex:1;
+            background: coral;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 24px;
+            margin: 5px
+        }
+
+        .or1 {
+            order: 1;
+        }
+
+        .or2 {
+            order: 2;
+        }
+
+        .or3 {
+            order: 3;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <p> Order: 0</p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p> Order diferente</p>
+    <div class="container">
+        <div class="item or3">1</div>
+        <div class="item or3">2</div>
+        <div class="item or3">3</div>
+        <div class="item or2">4</div>
+        <div class="item or2">4n</div>
+        <div class="item or1">4m</div>
+    </div>
+
+    <h1>Collum</h1>
+    <p> Order: 0</p>
+    <div class="container direction">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p> Order diferente</p>
+    <div class="container direction">
+        <div class="item or3">1</div>
+        <div class="item or3">2</div>
+        <div class="item or3">3</div>
+        <div class="item or2">4</div>
+        <div class="item or2">4n</div>
+        <div class="item or1">4m</div>
+    </div>
+</body>
+</html>

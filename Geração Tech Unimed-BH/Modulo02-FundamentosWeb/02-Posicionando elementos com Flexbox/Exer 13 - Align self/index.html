@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Fundamentos - Align Self</title>
+    <style>
+        .container {
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .align-container {
+            align-items: center;
+        }
+
+        .item {
+            flex: 1;
+            background: coral;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 24px;
+            margin: 5px
+        }
+
+        .center{ 
+            align-self:center;
+        }
+
+        .start{
+            align-self:start;
+        }
+
+        .end{
+            align-self:end;
+        }
+
+        .baseline{
+            align-self:baseline;
+        }
+
+        .stretch{
+            align-self:stretch;
+        }
+
+        .auto{
+            align-self:auto;
+        }
+
+        .direction{
+            flex-direction:column;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Row</h2>
+    <section class="container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem Ipsum Sussy Amongus</div>
+        <div class="item auto">Item 4</div>
+    </section>
+
+    <section class="container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem Ipsum Sussy Amongus</div>
+        <div class="item end">Item 4</div>
+    </section>
+
+    <section class="container">
+        <div class="item center">AAA</div>
+        <div class="item start">AAAaaaaaaaaa</div>
+        <div class="item end">AAAaaaaaaaaaaaaa</div>
+        <div class="item stretch">Lorem Ipsum Sussy Amongus</div>
+    </section>
+
+    <h1>Collum</h1>
+    <section class="container align-container direction">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem Ipsum Sussy Amongus</div>
+        <div class="item auto">Item 4</div>
+    </section>
+
+    <section class="container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem Ipsum Sussy Amongus</div>
+        <div class="item end">Item 4</div>
+    </section>
+
+    <section class="container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">AAAaaaaaaaaa</div>
+        <div class="item end">AAAaaaaaaaaaaaaa</div>
+        </section>
+
+</body>
+</html>

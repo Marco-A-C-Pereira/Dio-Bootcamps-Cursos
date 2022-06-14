@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Fundamentos - Align Itens</title>
+    <style>
+        .container {
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item {
+            background: aqua;
+            margin: 5px;
+            color: black;
+            text-align: center;
+            flex: 1;
+        }
+
+        .collum{
+            flex-direction:column;
+        }
+
+        .flex{
+            flex:1;
+        }
+
+        .center{
+            align-items:center;
+        }
+
+        .stretch{
+            align-items:stretch;
+        }
+
+        .flex-start{
+            align-items:flex-start
+        }
+
+        .flex-end{
+            align-items:self-end
+        }
+
+        .baseline{
+            align-items:baseline;
+        }
+
+        .central{
+            height:300px;
+            justify-content:center;
+        }
+
+        .central .item{
+            flex:0;
+            padding:20px;
+        }
+
+    </style>
+
+        </head >
+<body>
+
+    <h1>Rows</h1>
+    <h2>Aligrn Center </h2>
+    <section class="container center flex">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Align Stretch </h2>
+    <section class="container stretch">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Flex Start </h2>
+    <section class="container flex-start">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Flex End </h2>
+    <section class="container flex-end">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Baseline </h2>
+    <section class="container baseline ">
+        <div class="item"><br />Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto AAAAAA</div>
+    </section>
+
+    <h1>Collums</h1>
+
+    <h2>Aligrn Center </h2>
+    <section class="container flex collum">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Align Stretch </h2>
+    <section class="container stretch collum">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Flex Start </h2>
+    <section class="container flex-start collum">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Flex End </h2>
+    <section class="container flex-end collum">
+        <div class="item">Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto para esse tutorial</div>
+    </section>
+
+    <h2>Baseline </h2>
+    <section class="container baseline collum">
+        <div class="item"><br />Item 1 </div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non.</div>
+        <div class="item">Item 3 e muito mais texto AAAAAA</div>
+    </section>
+
+
+    <h1>Item alinado ao centro absoluto ?</h1>
+    <section class="container center central" >
+        <div class="item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius tellus lacinia, tristique nisi placerat, aliquet leo. Ut feugiat lorem. </div>
+    </section>
+
+</body>
+        </html >

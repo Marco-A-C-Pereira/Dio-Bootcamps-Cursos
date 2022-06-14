@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <title>Fundamentos - Flex Wrap</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            height: 300px;
+            border: 2px solid black;
+            max-width: 300px;
+            flex-direction: column;
+        }
+
+        .item {
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            min-width: 100px;
+            
+        }
+
+        .blue{
+            background:blue;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .purple{
+            background:purple;
+        }
+
+        /*Padrão do flex*/
+        .nowrap{
+            flex-wrap:nowrap;
+        }
+
+        .wrap{
+            flex-wrap:wrap;
+        }
+
+        .wrap-reverse{
+            flex-wrap:wrap-reverse
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>No wrap (Padrão)</h1>
+    <div class="flex-container nowrap">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item purple">3</div>
+        <div class="item red">4</div>
+        <div class="item purple">5</div>
+        <div class="item blue">6</div>
+        <div class="item purple">7</div>
+        <div class="item blue">8</div>
+        <div class="item red">9</div>
+    </div>
+
+    <h1>Wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item purple">3</div>
+        <div class="item red">4</div>
+        <div class="item purple">5</div>
+        <div class="item blue">6</div>
+        <div class="item purple">7</div>
+        <div class="item blue">8</div>
+        <div class="item red">9</div>
+    </div>
+    <h1>Reverse Wrap</h1>
+    <div class="flex-container wrap-reverse">
+        <div class="item blue">1</div>
+        <div class="item red">2</div>
+        <div class="item purple">3</div>
+        <div class="item red">4</div>
+        <div class="item purple">5</div>
+        <div class="item blue">6</div>
+        <div class="item purple">7</div>
+        <div class="item blue">8</div>
+        <div class="item red">9</div>
+    </div>
+
+</body>
+</html>
