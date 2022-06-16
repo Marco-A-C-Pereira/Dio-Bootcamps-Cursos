@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-content:center;
+    font-size:16px;
+}
+
+.general-wrap{
+    display:flex;
+    width:60%;
+    height:100vh;
+    align-items:center;
+    justify-content:start;
+}
+
+.celular {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+}
+
+.celular img{
+    height:50rem;
+}
+
+.right-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: 42rem;
+}
+
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #00000030;
+    background: white;
+    width: 100%;
+    padding: 2rem 1rem;
+    color: #989898;
+}
+
+.login-wrap:nth-child(1){
+    min-height:24rem;
+}
+
+.logo{
+    /*width:70%;*/
+    height:7rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid #00000030;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+
+.icon img{
+    width:100%;
+    height:50%;
+}
+
+.button__blue {
+    color: white;
+    background: #2d8ef3;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 2rem;
+}
+
+.remove-account {
+    color: #2d8ef3;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.account-switch {
+    color: #2d8ef3;
+    font-weight: bold;
+}
+
+.account-sing {
+    color: #2d8ef3;
+    font-weight: bold;
+}
+
+.getapp-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    padding:1rem;
+}
+
+.store {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 2.5rem;
+}
+
+.getapp{
+    color:#989898;
+    font-weight:bold;
+}
+
+.app-down {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+    .app-down:nth-child(1) {
+        background-image: url('images/Applestore.png');
+    }
+
+    .app-down:nth-child(2) {
+        background-image: url('images/Googlestore.png');
+    }
+
+    /* Responsividade */
+
+
+
+@media (max-width: 1400px) and (min-width: 801px) {
+    .general-wrap {
+        width: 80%;
+    }
+
+    .store {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .celular {
+        display: none;
+    }
+
+    .general-wrap {
+        width: 90%;
+    }
+
+    .right-wrap {
+        width: 100%;
+    }
+
+    .store {
+        padding: 1rem 1rem;
+    }
+}
+
+
+/*Valor mínimo que meu body aceita, não sei 
+  como dimiuir de forma que não quebre o código*/
+@media (max-width:980px) { 
+    .celular {
+        display: none;
+    }
+
+    .general-wrap {
+        width: 80%;
+    }
+
+    .right-wrap {
+        width: 100%;
+    }
+
+    .store {
+        padding: 1rem 1rem;
+    }
+
+    .celular {
+        display: none;
+    }
+}

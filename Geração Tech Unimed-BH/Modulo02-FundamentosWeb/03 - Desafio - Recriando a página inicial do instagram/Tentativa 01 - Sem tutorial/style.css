@@ -1,0 +1,95 @@
+body {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    margin-top: 5%;
+    font-family: Arial;
+    background: #FAFAFA;
+}
+
+a {
+    color: #2d8ef3;
+    font-weight: bold;
+}
+
+p{
+    color: #989898;
+}
+
+.wrap {
+    display:flex;
+}
+
+.wrapinternal {
+    padding: 2vh 1vw;
+}
+
+.wrapspace {
+    margin: 0px 1vw;
+}
+
+.standartspace{
+    margin-bottom: 5vh;
+}
+
+.collum{
+    flex-direction:column;
+}
+
+.jc-between{
+    justify-content:space-between;
+}
+
+.jc-center{
+    justify-content:center;
+}
+
+.ai-center{
+    align-items:center;
+}
+
+.shadowborder {
+    border: 1px solid #00000017;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    border: 1px solid #00000017;
+}
+
+    .icon.wrap {
+        max-width: 100px;
+        max-height: 100px;
+        min-width:50px;
+        min-height:50px;
+        overflow: hidden;
+        border-radius: 50%;
+        
+    }
+
+.storelogo img{
+    max-height:50px;
+    max-width:auto;
+    min-height:20px;
+}
+
+.logo{
+    width:100%;
+    max-width:15vw;
+    max-height:auto;
+}
+
+.bluebutton {
+    background: #2d8ef3;
+    color: white;
+    border-radius: 5%;
+    padding: 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#confirm p {
+    margin: 3px;
+}
