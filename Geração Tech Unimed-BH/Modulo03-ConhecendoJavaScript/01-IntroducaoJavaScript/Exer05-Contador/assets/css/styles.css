@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    box-sizing: border-box;
+
+}
+
+body{ 
+    background:paleturquoise;
+    color: #e9962a;
+    margin: auto;
+}
+
+#counter{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 3rem;
+}
+
+#counter button {
+    display: flex;
+    border-radius: 50%;
+    border: 1px transparent;
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content:center;
+    background: #E874DE;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin:2vh 20vw;
+    padding: 3%;
+    white-space: nowrap;
+}
+
+.container > *{
+    margin: 0.5rem;
+}
