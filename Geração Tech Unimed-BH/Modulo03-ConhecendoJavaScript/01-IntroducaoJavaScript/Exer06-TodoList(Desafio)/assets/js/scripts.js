@@ -1,69 +1,41 @@
-// //Brainstorm
-// O plano inicial é criar um método que captura os conteúdos do textfield utilizando o botão adicionar, dentro do metodo do botao ele concatena a string mais a tag de <li> como uma forma de ... "array de lista".
-// Depois é só utilizar um metodo para alterar o texto onde possui uma checkbox na lista
-
-// Novo problema ! A lista reseta quando eu adiciono um novo elemento !
-// Tenho que amazenar o checked em cada elemento
-//As checkboxes tem elementos ... e se eu der um event listen pra pegar o ID da que eu cliquei pra poder acessar o numero do array ? 
-
-//tarefas[] guarda a string toda que cria o elemento de checkbox.
-
-var textInputWrap = document.getElementById("campoTarefa");
-var checkboxId = document.getSelection
+var textInput = document.getElementById("campoTarefa");
+var contador = 0;
 
 
-var count = 0;
-const tarefas = [];
-var idAtual = "";
+// Devo querbar isso em metodos ? 
+function novaTarefa(){ 
+    let concat = `tarefa${contador}`;
 
-function criaP(){ 
-    let concat = `tarefa${count}`;
-    tarefas[count] = 
-    `<input type="checkbox" name="${concat}1" id="${concat}"
-    value="${textInputWrap.value}">
-    <label for="${concat}">${textInputWrap.value}</label>`;
-    //Criar metodo passar somente os parametros
-    // console.log(tarefas[count], count);
-    ++count;
+// Cria o primeiro Div
+    const wrap = document.createElement('div');
+    wrap.setAttribute("id", `Div${concat}`);
 
-    return tarefas; 
-    // Eu fiz um metodo estatico com retorno ??
+    const textotarefa = document.createTextNode(textInput.value);
+    
+    document.getElementById("listaTasks").appendChild(wrap);
+        
+// Cria a Checkbox
+    const checkboxCaixa = document.createElement('input');
+    checkboxCaixa.setAttribute("type", "checkbox");
+    checkboxCaixa.setAttribute("id", concat);
+    checkboxCaixa.setAttribute("name", concat);
+    checkboxCaixa.setAttribute("value", textInput.value);
+
+    document.getElementById(`Div${concat}`).appendChild(checkboxCaixa);
+
+// Cria um Label 
+    const labelCheckox = document.createElement('label');
+    labelCheckox.setAttribute("for",concat);
+    labelCheckox.innerHTML = textInput.value;
+
+    document.getElementById(`Div${concat}`).appendChild(labelCheckox);
+    
+// 
+    contador++;
 }
-
-const pegaId = (event) => {
-    if ((event.target.id.includes('tarefa')) ) 
-        {
-            idAtual = `"${(event.target.id)}"`
-            console.log(`O ID autal é ${idAtual}`)
-            return idAtual;
-    }
-}
-// Ok pelo que entendi do tutorial eu criei um evento de click 
-//que mira no ID ? 
 
 function submit(){        
-        document.getElementById("listaTasks").innerHTML = criaP();
+    novaTarefa();
 }
 
-function mostraId(){
-    if (idAtual.includes('tarefa')) {
-        document.getElementById(idAtual).checked = true;
-}
-
-}
-
-// function alteraCheckbox(){
-//     pegaId();
-
-// }
-
-
-//window.addEventListener('click', mudacheckbox)
-//document.addEventListener('click', alteraCheckbox);
-document.addEventListener('click', pegaId);
-document.addEventListener('click', mostraId);
 document.getElementById("addBut").addEventListener('click', submit);
-
-// document.getElementById(function(){pegaId();}).addEventListener('click', mudacheckbox);
-//document.getElementById(idAtual).addEventListener('click', mudacheckbox);
-

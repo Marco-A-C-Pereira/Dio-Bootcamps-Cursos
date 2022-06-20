@@ -1,6 +1,17 @@
 * {
     background: palevioletred;
+    font-size: 20px;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+#listaTasks {
+    display: flex;
+    flex-direction: column;
 }
 
 input[type=checkbox]:checked + label{
