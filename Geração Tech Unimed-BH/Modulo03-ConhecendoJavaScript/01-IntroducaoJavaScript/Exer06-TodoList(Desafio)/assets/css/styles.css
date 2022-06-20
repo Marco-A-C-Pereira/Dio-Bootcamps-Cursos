@@ -12,6 +12,14 @@ body {
 #listaTasks {
     display: flex;
     flex-direction: column;
+    
+}
+
+#listaTasks > div{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1%;
+    margin: 20px;
 }
 
 input[type=checkbox]:checked + label{
