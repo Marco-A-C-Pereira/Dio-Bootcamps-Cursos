@@ -7,44 +7,30 @@ let mesmoBtn;
     for (let i = 0; i < acc.length ; i ++){
         acc[i].addEventListener('click', function() { 
            
-            //console.log(this.parentNode.nextSibling);
-            //console.log(this.parentNode.getElementsByClassName('accordion'));
-            //console.log(acc);
-            //console.log(this.parentNode.classList.contains("btnAtivo"));
+            const botoesDoDiv = this.parentNode.getElementsByClassName('accordion');
 
-            // Verifica se existe um botao ativo
-            // Desativa todos ativos e ativa o clicado
-            let estaAtivo;
-            let botoesDoDiv = this.parentNode.getElementsByClassName('accordion');
 
-            for (let i = 0; i < botoesDoDiv.length; i++) 
-            {
-            let temAtivo = botoesDoDiv[i].classList.contains("btnAtivo");
-            
-            if (temAtivo) {
-                estaAtivo = botoesDoDiv[i];
-                }
-            }
-
-            if (estaAtivo) {estaAtivo.classList.toggle("btnAtivo");}
-            this.classList.toggle("btnAtivo");
-
-            //
-
-            // Pqp preciso achar uma forma de identificar se o mesmo botao foi pressionado
-            console.log(mesmoBtn);
-            console.log(this);
-            
-            if (mesmoBtn === this) { console.log("mesmo btn"); mesmoBtn=undefined}
-            if (!mesmoBtn) {mesmoBtn = this}
-            //
+            if (mesmoBtn === this){this.classList.toggle("btnAtivo");}
+            else {
+                for(let btn of botoesDoDiv){
+                btn.classList.remove('btnAtivo')}
+            this.classList.toggle("btnAtivo");} 
+            mesmoBtn = this;
 
             var panel = this.parentNode.nextSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
+            console.log(panel.style.maxHeight);
+            
+            
+            if (panel.style.maxHeight) {
+                panel.style.padding = "0 1rem"
+                panel.style.maxHeight = null;
             } else {
-                panel.style.display = "block";
+                panel.style.padding = "2rem 1rem"
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
+
+            console.log(panel.style.maxHeight);
+
         })
     }
 }

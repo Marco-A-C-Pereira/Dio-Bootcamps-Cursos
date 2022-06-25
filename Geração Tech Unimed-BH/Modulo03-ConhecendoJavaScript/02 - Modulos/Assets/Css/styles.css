@@ -1,24 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    background: bisque;
+    background: #d2f2fd;
 }
 
 #campos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 30%;
 }
 
 #campos h1{
-width: 10rem;
+font-size: 4.50rem;
 white-space: nowrap;
+font-family: 'EB Garamond', serif;
 }
 
 #campos button{
     font-family: Helvetica, Arial, sans-serif;
     padding: 0.25rem 3rem;
-    font-size: 15px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    background: salmon;
+    border: transparent;
+    transition: 0.5s;
+}
+
+#campos button:hover{
+    background: #c2726a;
+}
+
+#campos div div h2 {
+    font-family: 'EB Garamond', serif;
+}
+
+#campos input{
+    background:whitesmoke;
+    border: 1px solid salmon;
 }
 
 #inputLugar {
@@ -35,40 +57,58 @@ white-space: nowrap;
 
 #inputLugar div h2 {
     font-size: 25px;
-    margin-bottom: 0.25rem;
-    
+    margin-bottom: 0.25rem;    
 }
 
 #exibePesoas section {
-    /* display: flex;
-    flex-direction: column; */
     margin: none;
     margin-bottom: 10px;
+}
 
+#exibePesoas > h2 {
+    font-size: 3rem;
+    font-family: 'EB Garamond', serif;
 }
 
 #exibePesoas div {
     display: flex;
+    background:#c2726a;
+}
+
+#exibePesoas div  h2{
+    white-space: nowrap;
+    padding-left: 0.25rem;
+    padding-right: 2rem;
+    background:#c2726a;
+    margin-right: 10% solid white;
+    font-family: 'EB Garamond', serif;
+}
+
+.btnAtivo, .accordion:hover{
+    background-color: #c2726a !important;
 }
 
 #exibePesoas button {
     padding: 5px;
-    margin:  0 5px;
-    outline:purple solid;
+    outline: transparent;
+    background-color: salmon;
     border: none;
-    font-family: Helvetica, Arial, sans-serif;
     cursor: pointer;
     width: 100%;
-    transition: 1.5s;
+    transition: 0.5s;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
 }
 
-.btnAtivo, .accordion:hover{
-    background-color: purple;
-}
 
-.panel {
-    padding: 10px 18px;
-    background:white;
+
+.panel{
+    padding: 0 1rem;
+    font-size: 25px;
+    background-color: whitesmoke;
+    max-height: 0;
     overflow: hidden;
-    display: none;
+    transition: max-height 0.5s ease-out;
+    transition: padding 0.3s ease-out;
+    
 }

@@ -99,11 +99,20 @@ function submit() {
         let valorcampo = document.getElementById(campoAtualID(c));
         //console.log (valorcampo.value);
         pessoa1[pegaKeyObj(c)] = valorcampo.value;
+        
     }
-    // console.log(pessoa1);
-    // console.log(Object.keys(pessoa1));
-    salvaLocal(pessoa1);
-    constrObj(pessoa1);
+
+    const OBJ_CHECK = Object.values(pessoa1).some(x => !x);
+    console.log(OBJ_CHECK);
+
+    if (!OBJ_CHECK) {
+        salvaLocal(pessoa1);
+        constrObj(pessoa1);
+    } else {
+        alert("Preencha todos os valores");
+    }
+
+  
 }
 
 function carregaLocal () {
