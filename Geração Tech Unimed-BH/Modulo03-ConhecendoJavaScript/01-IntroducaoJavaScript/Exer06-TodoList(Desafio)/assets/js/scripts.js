@@ -27,20 +27,20 @@ function valorContador () {
 }
 
 var contador = 0;
-
+contador = valorContador();
 
 // Devo querbar isso em metodos ? 
 function novaTarefa(contAt, textAt){ 
     let divAtual = `Div${contAt}`;
     const  textotarefa = textAt;
 
-// Cria o primeiro Div
+// // Cria o primeiro Div
     const wrap = document.createElement('div');
     wrap.setAttribute("id", divAtual);
     
     document.getElementById("listaTasks").appendChild(wrap);
         
-// Cria a Checkbox
+// // Cria a Checkbox
     const checkboxCaixa = document.createElement('input');
     checkboxCaixa.setAttribute("type", "checkbox");
     checkboxCaixa.setAttribute("id", contAt);
@@ -49,14 +49,12 @@ function novaTarefa(contAt, textAt){
 
     document.getElementById(divAtual).appendChild(checkboxCaixa);
 
-// Cria um Label 
+// // Cria um Label 
     const labelCheckox = document.createElement('label');
     labelCheckox.setAttribute("for",contAt);
     labelCheckox.innerHTML = textotarefa;
 
     document.getElementById(divAtual).appendChild(labelCheckox);
-    contador++;
-// 
 
 // // Cria icone delete
 
@@ -68,6 +66,19 @@ btnDelete.setAttribute("width", "16px");
 btnDelete.setAttribute("heigth", "16px");
 
 document.getElementById(divAtual).appendChild(btnDelete);
+
+// // Cria icone edit
+
+const btnEdit = document.createElement('input');
+btnEdit.setAttribute("type", "image");
+btnEdit.setAttribute("id", `Edit${contAt}`);
+btnEdit.setAttribute("src", "assets/images/EditIcon.png");
+btnEdit.setAttribute("width", "16px");
+btnEdit.setAttribute("heigth", "16px");
+
+document.getElementById(divAtual).appendChild(btnEdit);
+
+contador++;
 }
 
 function salvaMemoria (tarefaKey, tarefaContent){
@@ -80,7 +91,6 @@ function criaTarefa(){
 
     novaTarefa(concatKey, conteudoTexto);
     salvaMemoria(concatKey, conteudoTexto);
-    contador++;
 }
 
 function exibirTarefas() {
@@ -95,22 +105,69 @@ function exibirTarefas() {
 }
 
 
+
+
 window.addEventListener('load', exibirTarefas);
 
 document.getElementById("addBut").addEventListener('click', criaTarefa);
 
 // Delegação de eventos aplicada
 // Capturo o evento com a Function e se aplicar as condições removo o div mais próximo (Pai checkbox label icon);
-divTarefas.addEventListener('click', function (e) {
-    const target = e.target;
+divTarefas.addEventListener('click', function (objDelete) {
+    const deleteTarget = objDelete.target;
 
-    if ((e.target.id.includes('Deletetarefa')) && 
-        (target.matches("input")))
+    if ((objDelete.target.id.includes('Deletetarefa')) && 
+        (deleteTarget.matches("input")))
          { 
-            localStorage.removeItem(target.parentNode.firstChild.id);
-            target.closest("div").remove();
-            
-            
+            localStorage.removeItem(deleteTarget.parentNode.firstChild.id);
+            deleteTarget.closest("div").remove();
          };
 });
 
+//Botão edit Checkbox estado
+divTarefas.addEventListener('click' , function (objEdit) {
+    const editTarget = objEdit.target;
+
+    if ((objEdit.target.matches("input")) && 
+        (objEdit.target.matches("[type = checkbox]")))   
+        {
+            console.log(editTarget.parentNode.firstChild.id);
+            console.log(editTarget.parentNode.firstChild.checked);
+
+            if (editTarget.parentNode.firstChild.checked) {
+                console.log("Marcou verderiro salvar e adicionar simbolo checklist da Key");
+
+                let editKey = localStorage.key(editTarget.parentNode.firstChild.id);
+                let editValue = objEdit.target.parentNode.children.item(1).innerHTML;
+
+                // // localStorage.key(editTarget.parentNode.firstChild.id) = "🗸";
+                localStorage.setItem(`${editKey}🗸`, editValue);
+             
+                
+                
+                
+               
+                
+            }   
+            else {
+                console.log("Marcou falso salvar e remove simbolo checklist da Key");
+            }
+
+
+
+
+
+        }
+
+    if((objEdit.target.id.includes('Edit')) && 
+       (objEdit.target.matches("input")))
+       {
+            console.log("Botaoedit funciona");
+       }
+
+})
+
+
+
+
+// E se eu salvar as keys com caractere pra checked e na hora de exibir criar eui tratar essa string ? 
