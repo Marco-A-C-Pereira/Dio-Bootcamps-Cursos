@@ -1,0 +1,198 @@
+body {
+    margin: auto;
+    font-family: Arial;
+    /*background:#e5e5e5;*/
+}
+
+.margin {
+    margin: 0 25%;
+}
+
+.espaco {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.bluesection {
+    background: #102A58;
+    color: white;
+}
+
+.whitesection {
+    background:white;
+    color: #102A58;
+}
+
+.container {
+    display: flex;
+}
+
+.subcontainer {
+    list-style-type: none;
+    display: flex;
+    padding:0;
+}
+
+.subcontainer li{
+    padding:0 10px;
+}
+
+.subcontainer a{
+    color:white;
+    text-decoration:none;
+}
+
+.botao {
+    padding: 10px 30px;
+    border-radius: 30px 30px 30px 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: end;
+}
+
+jc-around{
+    justify-content:space-around;
+}
+
+.jc-between{
+    justify-content:space-between;
+}
+
+.jc-even{
+    justify-content:space-evenly;
+}
+
+.collum {
+    flex-direction: column;
+}
+
+.paddingfix{
+    padding-bottom:50px;
+}
+
+    .paddingfix h1 {
+        color: #102A58;
+        font-size: 50px;
+        margin: 0px 0 20px 0;
+    }
+
+    .paddingfix p {
+        margin: 0px 0 100px 0;    
+        
+    }
+
+#balcao h2 {
+    color: #102A58;
+    font-size: 40px;
+    border-left: 5px solid #102A58;
+    padding-left: 5px;
+    margin-bottom: 75px;
+}
+
+#balcao p {
+    font-size: 16px;
+    line-height:20px;
+    margin:20px 0;
+}
+
+#servicos {
+    min-height: 500px;
+    max-height: 800px;
+}
+
+    #servicos p + a { /*botão branco*/
+        padding: 10px 30px;
+        border-radius: 30px 30px 30px 30px;
+        text-decoration: none;
+        background: white;
+        color: #102A58;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+
+    #servicos h2 {
+        font-size: 40px;
+        margin:0;
+    }
+
+#pacotes div{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    align-items: center;
+}
+
+#pacotes p{
+    font-size:18px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+#planos h2 {
+    font-size:40px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#planosoferta {
+    align-items: end;
+}
+
+    #planosoferta div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border: 5px solid #102A58;
+        padding:15px 30px 15px 20px;
+    }
+
+        #planosoferta div h3 {
+            border-bottom: 2px solid #102A58;
+            padding: 0px 20% 5px 20%;
+            font-size: 25px;
+            margin: 0 20px 20px 20px;
+            white-space: nowrap;
+        }
+
+    #planosoferta a { /*botão branco*/
+        padding: 10px 30px;
+        border-radius: 30px 30px 30px 30px;
+        text-decoration: none;
+        background: #102A58;
+        color: white;
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    #planosoferta ul {
+        text-align: left;
+        list-style-type: square;
+        list-style-position:inside;
+        color: #102A58;
+        line-height: 25px;
+        padding-inline-start: 0px;
+        padding-bottom:20px;
+    }
+
+    #planosoferta div:last-child ul {
+        padding-bottom: 50px;
+    }
+
+    #rodape{
+        padding-top:25px;
+    }
+
+#menu {
+    margin: 0 20%;
+}
+
+#menu ul{
+    font-weight:bold;
+}

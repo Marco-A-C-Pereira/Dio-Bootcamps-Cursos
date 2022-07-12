@@ -1,0 +1,24 @@
+#card {
+    transition: .5s;
+    
+}
+
+#card:hover{
+    transform:scale(1.075);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-img-fill {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-text-color{
+    color: green;
+    font-weight: bold;
+}
+
+.card-flex-endPos{
+    margin-top: auto;
+}

@@ -1,0 +1,10 @@
+<mat-list-item role="listitem"> 
+    <p [ngStyle]="{textDecoration: done ? 'line-through' : 'none' }">
+         {{task.title}}
+    </p>
+    
+    <button mat-icon-button aria-label="Marcar como conc" (click)="doneTask()">
+        <mat-icon>done</mat-icon>
+      </button>
+    <button mat-raised-button color="warn" (click)="removeTask()" >Delete</button>
+</mat-list-item>

@@ -1,0 +1,14 @@
+ <div class="d-flex flex-column">
+
+    <div>
+        <app-filters [maiorValor]="maiorValor" (sliderEvento)="reciveEventoSlider($event)"> </app-filters>
+    </div>
+
+    <div>
+      <app-camisas-list 
+        [sliderParam]="sliderObj" 
+        (maxVal)="reciveMaiorValor($event)">
+     </app-camisas-list>
+    </div>
+
+ </div>

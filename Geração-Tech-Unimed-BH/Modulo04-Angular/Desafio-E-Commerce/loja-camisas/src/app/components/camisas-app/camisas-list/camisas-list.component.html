@@ -1,0 +1,5 @@
+<div class="row mt-4">
+    <div class="col-md-4 mb-3" *ngFor="let camisa of filteredCamisas" @cardFade>
+        <app-camisa-item [camisa]="camisa"></app-camisa-item>
+    </div>
+</div>
