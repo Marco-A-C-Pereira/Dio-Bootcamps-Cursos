@@ -22,3 +22,31 @@
 .card-flex-endPos{
     margin-top: auto;
 }
+
+button {
+    font-size: 2rem;
+    color: #85bb65;
+    background: none;
+    cursor: pointer;
+
+    outline: none;
+    border: none;
+
+    overflow: hidden;
+    transition: .5s;
+}
+
+button:hover{
+    transform:scale(1.3);
+    transition: .2s;
+}
+
+button:active {
+    transform:scale(1);
+    transition: .1s;
+}
+
+button:active::after {
+    transform:scale(1.3);
+    transition: .2s;
+}

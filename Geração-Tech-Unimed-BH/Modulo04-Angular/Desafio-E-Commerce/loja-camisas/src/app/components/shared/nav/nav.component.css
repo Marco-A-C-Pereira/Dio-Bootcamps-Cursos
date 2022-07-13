@@ -1,0 +1,26 @@
+button {
+    font-size: 3rem;
+    background: none;
+    cursor: pointer;
+
+    outline: none;
+    border: none;
+
+    overflow: hidden;
+    transition: .5s;
+}
+
+button:hover{
+    transform:scale(1.3);
+    transition: .2s;
+}
+
+button:active {
+    transform:scale(1);
+    transition: .1s;
+}
+
+button:active::after {
+    transform:scale(1.3);
+    transition: .2s;
+}

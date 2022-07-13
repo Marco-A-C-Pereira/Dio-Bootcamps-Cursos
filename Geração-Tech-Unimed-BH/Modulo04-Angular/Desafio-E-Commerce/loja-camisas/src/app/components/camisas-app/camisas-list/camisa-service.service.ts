@@ -18,4 +18,6 @@ export class CamisaService {
   getCamisa(): Observable<Camisa[]>{
     return this.httpClient.get<Camisa[]>(this.url) 
   }
+
+  
 }

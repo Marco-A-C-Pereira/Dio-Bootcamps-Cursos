@@ -17,6 +17,8 @@ import { CamisasListComponent } from './components/camisas-app/camisas-list/cami
 import { CamisaItemComponent } from './components/camisas-app/camisas-list/camisa-item/camisa-item.component';
 import { CamisaService } from './components/camisas-app/camisas-list/camisa-service.service';
 import { StarComponent } from './components/shared/star/star.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { StarComponent } from './components/shared/star/star.component';
     FiltersComponent,
     CamisasListComponent,
     CamisaItemComponent,
-    StarComponent
+    StarComponent,
+    CartComponent,
+    CartItemComponent,
   ],
   imports: [
     NgxSliderModule,
